@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:layout_marginBottom="1dp"
+    android:background="@drawable/edittext_border_green_fade"
+    android:padding="6dip"
+    tools:padding="10dp">
+
+    <TextView
+        android:id="@+id/firstLineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:text="Name of Workout"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/copyButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/secondLineText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingLeft="10dp"
+        android:text="Created On"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/firstLineText"
+        app:layout_constraintStart_toStartOf="@+id/firstLineText"
+        app:layout_constraintTop_toBottomOf="@+id/firstLineText" />
+
+    <TextView
+        android:id="@+id/completedOnText"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center_vertical"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingLeft="10dp"
+        android:text="Completed On"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/firstLineText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/firstLineText"
+        app:layout_constraintTop_toBottomOf="@+id/secondLineText" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/visitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/light_green"
+        android:baseline="0dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintBottom_toBottomOf="@+id/deleteWorkoutItemButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/copyButton"
+        app:rippleColor="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/copyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/hint_color_grey"
+        android:baseline="0dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="?attr/actionModeCopyDrawable"
+        app:layout_constraintEnd_toStartOf="@+id/visitButton"
+        app:layout_constraintTop_toTopOf="@+id/firstLineText"
+        app:rippleColor="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteWorkoutItemButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/dark_red"
+        android:baseline="0dp"
+        android:scaleX="0.7"
+        android:scaleY="0.7"
+        android:src="@android:drawable/ic_menu_delete"
+        app:layout_constraintEnd_toEndOf="@+id/copyButton"
+        app:layout_constraintStart_toStartOf="@+id/copyButton"
+        app:layout_constraintTop_toBottomOf="@+id/copyButton"
+        app:rippleColor="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

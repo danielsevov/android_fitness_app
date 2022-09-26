@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edittext_border_green"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/firstLineText"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Reps"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/repsText"
+        app:layout_constraintStart_toStartOf="@+id/repsText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/discardButton"
+        android:layout_width="33dp"
+        android:layout_height="30dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="X"
+        android:textColor="@color/red"
+        android:textColorHint="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/isCompleteCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/isCompleteCheckBox" />
+
+    <TextView
+        android:id="@+id/secondText"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="KGs"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/kiloText"
+        app:layout_constraintStart_toStartOf="@+id/kiloText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/repsText"
+        android:layout_width="80dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/edittext_border_light_green"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="eg. 200"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="#BFC5C5C5"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/discardButton"
+        app:layout_constraintTop_toBottomOf="@+id/firstLineText" />
+
+    <EditText
+        android:id="@+id/kiloText"
+        android:layout_width="80dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/edittext_border_light_green"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="eg. 200"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/white"
+        android:textColorHint="#BFC5C5C5"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/isCompleteCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/repsText"
+        app:layout_constraintTop_toBottomOf="@+id/firstLineText" />
+
+    <CheckBox
+        android:id="@+id/isCompleteCheckBox"
+        style="@style/Widget.AppCompat.CompoundButton.CheckBox"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:outlineAmbientShadowColor="@color/light_green"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:textColor="@color/light_green"
+        app:layout_constraintBottom_toBottomOf="@+id/kiloText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

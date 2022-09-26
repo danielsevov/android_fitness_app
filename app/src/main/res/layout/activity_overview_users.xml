@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outterConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/scrollView"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:background="@mipmap/darkgreenlines"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/innerConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp">
+
+      <TextView
+          android:id="@+id/pageTitleText"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:fontFamily="sans-serif-light"
+          android:text="@string/my_trainees"
+          android:textAlignment="center"
+          android:textColor="@color/white"
+          android:textSize="34sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <EditText
+          android:id="@+id/enterUserText"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="50dp"
+          android:layout_marginEnd="10dp"
+          android:background="@drawable/edittext_border_dark_green"
+          android:ems="10"
+          android:fontFamily="sans-serif-light"
+          android:hint="@string/search_user_by_name"
+          android:inputType="textPersonName"
+          android:minHeight="48dp"
+          android:padding="10dp"
+          android:textColor="@color/white"
+          android:textColorHint="#BFC5C5C5"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/pageTitleText" />
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/registerUserButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_marginEnd="10dp"
+          android:layout_marginBottom="50dp"
+          android:backgroundTint="@color/light_green"
+          android:fontFamily="sans-serif-light"
+          android:src="@drawable/ic_new_profile"
+          android:text="@string/new_user"
+          android:textAllCaps="true"
+          android:textColor="@color/white"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/activeWorkoutsRecyclerView"
+          app:layout_constraintVertical_bias="1.0" />
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/backButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="10dp"
+          android:backgroundTint="@color/dark_red"
+          android:fontFamily="sans-serif-light"
+          android:src="?attr/actionModeCloseDrawable"
+          android:text="@string/back"
+          android:textAllCaps="true"
+          android:textColor="@color/white"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/registerUserButton" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/activeWorkoutsRecyclerView"
+          android:layout_width="0dp"
+          android:layout_height="400dp"
+          android:layout_marginStart="10dp"
+          android:layout_marginTop="5dp"
+          android:layout_marginEnd="10dp"
+          android:background="@drawable/edittext_border_dark_green"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/enterUserText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

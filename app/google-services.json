@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "440508650388",
+    "project_id": "lift-to-live-app-34db2",
+    "storage_bucket": "lift-to-live-app-34db2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:440508650388:android:2e68ad2cf90d761cdc7581",
+        "android_client_info": {
+          "package_name": "com.personal.lifttoliveapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "440508650388-17hso4insnnu51inevvl54o0ocppkbsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB45uweQzrUpgUP664R3wm38PLFAUNOlOg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "440508650388-17hso4insnnu51inevvl54o0ocppkbsj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

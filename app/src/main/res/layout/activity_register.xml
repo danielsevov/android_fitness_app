@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/outterConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/darkgreenfade"
+    tools:context=".RegisterActivity">
+
+  <androidx.core.widget.NestedScrollView
+      android:id="@+id/scrollView"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:background="@mipmap/darkgreenlines"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/innerConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp">
+
+      <TextView
+          android:id="@+id/pageTitleText"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:fontFamily="sans-serif-light"
+          android:text="@string/register_new_user"
+          android:textAlignment="center"
+          android:textColor="@color/white"
+          android:textColorHint="#BFC5C5C5"
+          android:textSize="34sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      <EditText
+          android:id="@+id/enterUserText"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="50dp"
+          android:background="@drawable/edittext_border_green"
+          android:ems="10"
+          android:fontFamily="sans-serif-thin"
+          android:hint="@string/enter_users_name"
+          android:importantForAutofill="no"
+          android:inputType="textPersonName"
+          android:minHeight="48dp"
+          android:padding="10dp"
+          android:textColor="@color/white"
+          android:textColorHint="#BCAAA4"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/pageTitleText" />
+
+      <EditText
+          android:id="@+id/enterEmailText"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/edittext_border_green"
+          android:ems="10"
+          android:fontFamily="sans-serif-thin"
+          android:hint="@string/enter_users_email_address"
+          android:inputType="textEmailAddress"
+          android:minHeight="48dp"
+          android:padding="10dp"
+          android:textColor="@color/white"
+          android:textColorHint="#BCAAA4"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/enterUserText" />
+
+      <EditText
+          android:id="@+id/enterPasswordText"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/edittext_border_green"
+          android:ems="10"
+          android:fontFamily="sans-serif-thin"
+          android:hint="@string/enter_users_password"
+          android:inputType="text"
+          android:minHeight="48dp"
+          android:padding="10dp"
+          android:textColor="@color/white"
+          android:textColorHint="#BCAAA4"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/enterCoachText" />
+
+      <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+          android:id="@+id/enterCoachText"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/edittext_border_green"
+          android:ems="10"
+          android:fontFamily="sans-serif-thin"
+          android:hint="@string/select_coach"
+          android:inputType="text"
+          android:minHeight="48dp"
+          android:padding="10dp"
+          android:textColor="@color/white"
+          android:textColorHint="#BCAAA4"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/enterEmailText" />
+
+      <EditText
+          android:id="@+id/enterPhoneNumberText"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/edittext_border_green"
+          android:ems="10"
+          android:fontFamily="sans-serif-thin"
+          android:hint="@string/enter_users_phone_number"
+          android:inputType="phone"
+          android:minHeight="48dp"
+          android:padding="10dp"
+          android:textColor="@color/white"
+          android:textColorHint="#BCAAA4"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/enterPasswordText" />
+
+      <AutoCompleteTextView
+          android:id="@+id/enterNationalityText"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/edittext_border_green"
+          android:ems="10"
+          android:fontFamily="sans-serif-thin"
+          android:hint="@string/enter_users_nationality"
+          android:inputType="text"
+          android:minHeight="48dp"
+          android:padding="10dp"
+          android:textColor="@color/white"
+          android:textColorHint="#BCAAA4"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="1.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/enterPhoneNumberText" />
+
+      <com.personal.lifttoliveapp.misc.CustomDatePicker
+          android:id="@+id/enterBirthDate"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:background="@drawable/edittext_border_green"
+          android:calendarTextColor="@color/white"
+
+          android:ems="10"
+          android:hint="@string/enter_users_date_of_birth"
+          android:inputType="date"
+          android:minHeight="48dp"
+          android:outlineAmbientShadowColor="@color/white"
+          android:outlineSpotShadowColor="@color/white"
+          android:padding="10dp"
+          android:yearListSelectorColor="@color/white"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/enterBirthText"
+          tools:calendarTextColor="@color/white" />
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/registerUserButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="50dp"
+          android:backgroundTint="@color/light_green"
+          android:fontFamily="sans-serif-light"
+          android:src="@android:drawable/ic_menu_save"
+          android:text="@string/register"
+          android:textAllCaps="true"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/enterBirthDate"
+          app:maxImageSize="30dp" />
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/backButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:backgroundTint="#A30404"
+          android:fontFamily="sans-serif-light"
+          android:src="?attr/actionModeCloseDrawable"
+          android:text="@string/Cancel"
+          android:textAllCaps="true"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@+id/registerUserButton" />
+
+      <TextView
+          android:id="@+id/enterBirthText"
+          android:layout_width="0dp"
+          android:layout_height="50dp"
+          android:layout_marginTop="20dp"
+          android:background="@drawable/edittext_border_green"
+          android:fontFamily="sans-serif-thin"
+          android:gravity="center_vertical"
+          android:hint="@string/enter_users_date_of_birth"
+          android:paddingLeft="10dp"
+          android:textColor="@color/white"
+          android:textColorHint="#BCAAA4"
+          android:textSize="18sp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/enterNationalityText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
